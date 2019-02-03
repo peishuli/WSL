@@ -56,7 +56,8 @@ $ sudo apt-get install -y kubectl
 ```
 Now that with Kubectl CLI installed, you need to wire it to the Kubernetes cluster that is running in Docker CE under windows. You can achieve this by setting the *KUBECONFIG* environment varible in .bashrc as follows:
 ```
-$ echo "KUBECONFIG=/mnt/c/Users/lipeishu/.kube/config ; export KUBECONFIG" >> ~/.bashrc
+$ USERNAME = {...your Windows username...}
+$ echo "KUBECONFIG=/mnt/c/Users/$USERNAME/.kube/config ; export KUBECONFIG" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 ## Install Helm Client
