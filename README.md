@@ -26,12 +26,12 @@ Before you can install WSL, you have to enable it in *Turn Windows Feature On an
 ## Install WSL
 To install WSL, follow this [link](https://docs.microsoft.com/en-us/windows/wsl/install-manual), download the *Ubuntu 16.04* package to your local computer and duble-click the .appx file to install WSL.
 
-Enter username and password when promoted (e.g.,peishu/password)
+Enter username and password when promoted.
 
 ## Install Docker
 To install Docker under WSL, navigate to this [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/) and follow instructions under *Install using the repository* section to install Docker CLI.
 
-After installing Docker CLI, it's time to wire it up to the Docker deamon that is running under Windows:
+After installing Docker CLI, it's time to wire it up to the Docker deamon that is running under Windows. You can achieve this by setting the *DOCKER_HOST* environment varible in .bashrc as follows:
 ```
 $ echo "DOCKER_HOST=tcp://127.0.0.1:2375 ; export DOCKER_HOST" >> ~/.bashrc
 $ source ~/.bashrc
@@ -54,7 +54,7 @@ $ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc
 $ sudo apt-get update
 $ sudo apt-get install -y kubectl
 ```
-Now that with Kubectl CLI installed, you need to wire it to the Kubernetes cluster that is running in Docker CE under windows by executing the fullowing commands:
+Now that with Kubectl CLI installed, you need to wire it to the Kubernetes cluster that is running in Docker CE under windows. You can achieve this by setting the *KUBECONFIG* environment varible in .bashrc as follows:
 ```
 $ echo "KUBECONFIG=/mnt/c/Users/lipeishu/.kube/config ; export KUBECONFIG" >> ~/.bashrc
 $ source ~/.bashrc
