@@ -1,3 +1,5 @@
+# How to Set up Windows Subsystem for Linux on Windows 10 for Docker/Kubernetes Development
+
 ### Table of Content
 1. [Introcuction](#introcuction)
 2. [Prerequisites](#prerequisites)
@@ -19,7 +21,7 @@ This document assumes that you have the latest version of Docker CE for Windows 
 ## Enable WSL Feature
 Before you can install WSL, you have to enable it in *Turn Windows Feature On and Off* window, check *Windows Subsystem for Linux* and restart your computer.
 
-![turn-on-wsl-feature.jpg](/docs/turn-on-wsl-feature-47f56e99-6a6b-44d6-89bf-cf3a498131b8.jpg)
+![turn-on-wsl-feature.jpg](images/turn-on-wsl-feature-47f56e99-6a6b-44d6-89bf-cf3a498131b8.jpg)
 
 ## Install WSL
 To install WSL, follow this [link](https://docs.microsoft.com/en-us/windows/wsl/install-manual), download the *Ubuntu 16.04* package to your local computer and duble-click the .appx file to install WSL.
