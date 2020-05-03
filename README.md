@@ -67,3 +67,10 @@ $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > ge
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
 ```
+
+## Install Bat cli
+```
+$ wget https://github.com/sharkdp/bat/releases/download/v0.15.0/bat_0.15.0_amd64.deb
+$ sudo apt install gdebi
+$ sudo gdebi bat_0.15.0_amd64.deb
+```
