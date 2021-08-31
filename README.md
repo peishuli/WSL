@@ -60,6 +60,12 @@ $ USERNAME = {...your Windows username...}
 $ echo "KUBECONFIG=/mnt/c/Users/$USERNAME/.kube/config ; export KUBECONFIG" >> ~/.bashrc
 $ source ~/.bashrc
 ```
+To upgrade kubectl to latest version:
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl $(which kubectl)
+```
 ## Install Helm Client
 This [link](https://docs.helm.sh/using_helm/#installing-helm) contains the official documentation on installing Helm. Follow the instructions under *From Scrip* section to install Helm CLI:
 ```
