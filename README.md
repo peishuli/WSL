@@ -9,7 +9,7 @@
 6. [Install Docker Compose](#install-docker-compose)
 7. [Install Kubectl](#install-kubectl)
 8. [Install Helm Client](#install-helm-client)
-
+9. [Install WSL Utilities wslu](#install-wslu)
 ## Introcuction
 This document will walk you through the processes to enable WSL on Windows 10. WSL will greatly improve your experience in Docker and Kubernetes development.
 
@@ -72,4 +72,9 @@ This [link](https://docs.helm.sh/using_helm/#installing-helm) contains the offic
 $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
+```
+## Install wslu
+```
+$ sudo apt update
+$ sudo apt install ubuntu-wsl
 ```
