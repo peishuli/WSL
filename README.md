@@ -33,8 +33,8 @@ To install Docker under WSL, navigate to this [link](https://docs.docker.com/ins
 
 After installing Docker CLI, it's time to wire it up to the Docker deamon that is running under Windows. You can achieve this by setting the *DOCKER_HOST* environment varible in .bashrc as follows:
 ```
-$ echo "DOCKER_HOST=tcp://127.0.0.1:2375 ; export DOCKER_HOST" >> ~/.bashrc
-$ source ~/.bashrc
+echo "DOCKER_HOST=tcp://127.0.0.1:2375 ; export DOCKER_HOST" >> ~/.bashrc
+source ~/.bashrc
 ```
 To start docker daemon:
 ```
@@ -44,25 +44,25 @@ sudo service docker start
 ## Install Docker Compose
 To Install Docker Compose under WSL, execute the following commands:
 ```
-$ sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-$ sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ## Install Kubectl
 To install Kubectl under WSL, follow the instruction on this [link](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) and execute the following commands
 ```
-$ sudo apt-get update && sudo apt-get install -y apt-transport-https
-$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-$ sudo touch /etc/apt/sources.list.d/kubernetes.list 
-$ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-$ sudo apt-get update
-$ sudo apt-get install -y kubectl
+sudo apt-get update && sudo apt-get install -y apt-transport-https
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo touch /etc/apt/sources.list.d/kubernetes.list 
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
 ```
 Now that with Kubectl CLI installed, you need to wire it to the Kubernetes cluster that is running in Docker CE under windows. You can achieve this by setting the *KUBECONFIG* environment varible in .bashrc as follows:
 ```
-$ USERNAME = {...your Windows username...}
-$ echo "KUBECONFIG=/mnt/c/Users/$USERNAME/.kube/config ; export KUBECONFIG" >> ~/.bashrc
-$ source ~/.bashrc
+USERNAME = {...your Windows username...}
+echo "KUBECONFIG=/mnt/c/Users/$USERNAME/.kube/config ; export KUBECONFIG" >> ~/.bashrc
+source ~/.bashrc
 ```
 To upgrade kubectl to latest version:
 ```
@@ -77,12 +77,12 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 ## Install Helm Client
 This [link](https://docs.helm.sh/using_helm/#installing-helm) contains the official documentation on installing Helm. Follow the instructions under *From Scrip* section to install Helm CLI:
 ```
-$ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
-$ chmod 700 get_helm.sh
-$ ./get_helm.sh
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
 ```
 ## Install wslu
 ```
-$ sudo apt update
-$ sudo apt install ubuntu-wsl
+sudo apt update
+sudo apt install ubuntu-wsl
 ```
