@@ -69,7 +69,7 @@ To upgrade kubectl to latest version:
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x ./kubectl
 sudo mv ./kubectl $(which kubectl)
-
+```
 To enable bash autocomplete for alias 'k'
 ```
 echo 'complete -F __start_kubectl k' >>~/.bashrc
