@@ -36,6 +36,10 @@ After installing Docker CLI, it's time to wire it up to the Docker deamon that i
 $ echo "DOCKER_HOST=tcp://127.0.0.1:2375 ; export DOCKER_HOST" >> ~/.bashrc
 $ source ~/.bashrc
 ```
+To start docker daemon:
+```
+sudo service docker start
+```
 
 ## Install Docker Compose
 To Install Docker Compose under WSL, execute the following commands:
